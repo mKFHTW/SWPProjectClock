@@ -1,0 +1,21 @@
+c:\users\mk\documents\visual studio 2013\Projects\SWPProjectClock\SWPProjectClock\bin\Debug\SWPProjectClock.exe.config
+c:\users\mk\documents\visual studio 2013\Projects\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.csprojResolveAssemblyReference.cache
+c:\users\mk\documents\visual studio 2013\Projects\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.Properties.Resources.resources
+c:\users\mk\documents\visual studio 2013\Projects\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.csproj.GenerateResource.Cache
+c:\users\mk\documents\visual studio 2013\Projects\SWPProjectClock\SWPProjectClock\bin\Debug\SWPProjectClock.exe
+c:\users\mk\documents\visual studio 2013\Projects\SWPProjectClock\SWPProjectClock\bin\Debug\SWPProjectClock.pdb
+c:\users\mk\documents\visual studio 2013\Projects\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.exe
+c:\users\mk\documents\visual studio 2013\Projects\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.pdb
+c:\users\mk\documents\visual studio 2013\Projects\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.Form1.resources
+M:\Downloads\SWPProjectClock\SWPProjectClock\bin\Debug\SWPProjectClock.exe.config
+M:\Downloads\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.exe
+M:\Downloads\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.pdb
+M:\Downloads\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.csprojResolveAssemblyReference.cache
+M:\Downloads\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.Form1.resources
+M:\Downloads\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.Properties.Resources.resources
+M:\Downloads\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.csproj.GenerateResource.Cache
+M:\Downloads\SWPProjectClock\SWPProjectClock\bin\Debug\SWPProjectClock.exe
+M:\Downloads\SWPProjectClock\SWPProjectClock\bin\Debug\SWPProjectClock.pdb
+C:\Users\mK\Documents\Visual Studio 2013\Projects\SWPProjectClock\SWPProjectClock\SWPProjectClock\bin\Debug\SWPProjectClock.exe.config
+C:\Users\mK\Documents\Visual Studio 2013\Projects\SWPProjectClock\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.exe
+C:\Users\mK\Documents\Visual Studio 2013\Projects\SWPProjectClock\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.pdb
