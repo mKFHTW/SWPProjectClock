@@ -9,6 +9,6 @@ namespace SWPProjectClock
     interface ICommand
     {
         string getCommandName { get; }
-        void doCommand(command cmd);
+        void doCommand(Command cmd);
     }
 }

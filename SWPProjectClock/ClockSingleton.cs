@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SWPProjectClock
 {
-    class ClockSingleton
+    class ClockSingleton : Clock
     {
         /*private int hour = 0;
         private int minute = 0;
@@ -17,18 +18,23 @@ namespace SWPProjectClock
         public int second { get; set; }
 
         private static ClockSingleton actualClock = null;
-            
+
         protected ClockSingleton()
         { }
 
-        public static ClockSingleton getClock { 
+        public static ClockSingleton getClock
+        {
             get
             {
-            if (actualClock == null)
-                return actualClock = new ClockSingleton();
-            else
-                return actualClock;
-            }    
+                if (actualClock == null)
+                    return actualClock = new ClockSingleton();
+                else
+                    return actualClock;
+            }
+
+
         }
+
+
     }
 }

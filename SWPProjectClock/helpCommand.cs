@@ -7,12 +7,12 @@ using System.Windows.Forms;
 
 namespace SWPProjectClock
 {
-    class helpCommand : ICommand
+    class HelpCommand : ICommand
     {
-        public void doCommand(command cmd)
+        public void doCommand(Command cmd)
         {
             MessageBox.Show("This is the help!");
-            commandQueue.getQueue.Add(cmd);
+            CommandQueue.getQueue.Add(cmd);
         }
 
         public string getCommandName

@@ -6,32 +6,32 @@ using System.Threading.Tasks;
 
 namespace SWPProjectClock
 {
-    class redoCommand : ICommand
+    class RedoCommand : ICommand
     {
-        public void doCommand(command cmd)
+        public void doCommand(Command cmd)
         {
-            command newCmd = commandQueue.getQueue[commandQueue.getQueue.Count - 1];
+            Command newCmd = CommandQueue.getQueue[CommandQueue.getQueue.Count - 1];
             ICommand obj = null;
 
             switch (newCmd.type)
             {
                 case "set":
-                    obj = new setCommand();
+                    obj = new SetCommand();
                     break;
                 case "help":
-                    obj = new helpCommand();
+                    obj = new HelpCommand();
                     break;
                 case "dec":
-                    obj = new decCommand();
+                    obj = new DecCommand();
                     break;
                 case "inc":
-                    obj = new incCommand();
+                    obj = new IncCommand();
                     break;
                 case "undo":
-                    obj = new undoCommand();
+                    obj = new UndoCommand();
                     break;
                 case "redo":
-                    obj = new redoCommand();
+                    obj = new RedoCommand();
                     break;
                 default:
                     break;

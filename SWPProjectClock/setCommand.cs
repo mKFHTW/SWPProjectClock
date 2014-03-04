@@ -7,9 +7,9 @@ using System.Diagnostics;
 
 namespace SWPProjectClock
 {
-    class setCommand : ICommand
+    class SetCommand : ICommand
     {
-        public void doCommand(command cmd)
+        public void doCommand(Command cmd)
         {
             ClockSingleton actual = ClockSingleton.getClock;
 
@@ -22,7 +22,7 @@ namespace SWPProjectClock
                 else
                     actual.second = Convert.ToInt32(item.Value);
             }
-            commandQueue.getQueue.Add(cmd);
+            CommandQueue.getQueue.Add(cmd);
         }
 
         public string getCommandName

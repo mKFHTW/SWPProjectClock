@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SWPProjectClock
 {
-    class incCommand : ICommand
+    class IncCommand : ICommand
     {
-        public void doCommand(command cmd)
+        public void doCommand(Command cmd)
         {
             ClockSingleton actual = ClockSingleton.getClock;
 
@@ -21,7 +21,7 @@ namespace SWPProjectClock
                 else
                     actual.second += Convert.ToInt32(item.Value);
             }
-            commandQueue.getQueue.Add(cmd);
+            CommandQueue.getQueue.Add(cmd);
         }
 
         public string getCommandName

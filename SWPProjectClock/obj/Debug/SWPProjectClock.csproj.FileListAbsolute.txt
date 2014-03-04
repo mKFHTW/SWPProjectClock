@@ -19,3 +19,11 @@ M:\Downloads\SWPProjectClock\SWPProjectClock\bin\Debug\SWPProjectClock.pdb
 C:\Users\mK\Documents\Visual Studio 2013\Projects\SWPProjectClock\SWPProjectClock\SWPProjectClock\bin\Debug\SWPProjectClock.exe.config
 C:\Users\mK\Documents\Visual Studio 2013\Projects\SWPProjectClock\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.exe
 C:\Users\mK\Documents\Visual Studio 2013\Projects\SWPProjectClock\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.pdb
+C:\Users\Sevilmis\Documents\GitHub\SWPProjectClock\SWPProjectClock\bin\Debug\SWPProjectClock.exe.config
+C:\Users\Sevilmis\Documents\GitHub\SWPProjectClock\SWPProjectClock\bin\Debug\SWPProjectClock.exe
+C:\Users\Sevilmis\Documents\GitHub\SWPProjectClock\SWPProjectClock\bin\Debug\SWPProjectClock.pdb
+C:\Users\Sevilmis\Documents\GitHub\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.Form1.resources
+C:\Users\Sevilmis\Documents\GitHub\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.Properties.Resources.resources
+C:\Users\Sevilmis\Documents\GitHub\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.csproj.GenerateResource.Cache
+C:\Users\Sevilmis\Documents\GitHub\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.exe
+C:\Users\Sevilmis\Documents\GitHub\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.pdb

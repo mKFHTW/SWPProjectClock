@@ -7,29 +7,29 @@ using System.Windows.Forms;
 
 namespace SWPProjectClock
 {
-    class undoCommand : ICommand
+    class UndoCommand : ICommand
     {
-        public void doCommand(command cmd)
+        public void doCommand(Command cmd)
         {
-            command newCmd = commandQueue.getQueue[commandQueue.getQueue.Count - 1];
+            Command newCmd = CommandQueue.getQueue[CommandQueue.getQueue.Count - 1];
             ICommand obj = null;
 
             switch (newCmd.type)
             {
                 case "set":
                     // Dauer zwischen vorher und gesetztem Wert relevant ?
-                    obj = new setCommand();
+                    obj = new SetCommand();
                     break;
                 case "help":
                     MessageBox.Show("Macht keinen Sinn");
                     break;
                 case "dec":
                     newCmd.type = "inc";
-                    obj = new incCommand();
+                    obj = new IncCommand();
                     break;
                 case "inc":
                     newCmd.type = "dec";
-                    obj = new decCommand();
+                    obj = new DecCommand();
                     break;
                 case "undo":
                     MessageBox.Show("Macht keinen Sinn");

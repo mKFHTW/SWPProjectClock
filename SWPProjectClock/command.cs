@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace SWPProjectClock
 {
-    public class command
+    public class Command
     {
         public string type { get; set; }
         public Dictionary<string, string> parameter { get; set; }        
 
-        public command(string commandLine)
+        public Command(string commandLine)
         {
             string[] splitted = commandLine.Split();
 

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace SWPProjectClock
 {
-    class showCommand : ICommand
+    class ShowCommand : ICommand
     {
-        public void doCommand(command cmd)
+        public void doCommand(Command cmd)
         {
-            commandQueue.getQueue.Add(cmd);
+            CommandQueue.getQueue.Add(cmd);
         }
 
         public string getCommandName

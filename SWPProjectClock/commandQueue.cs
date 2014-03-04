@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace SWPProjectClock
 {
-    public class commandQueue
+    public class CommandQueue
     {        
         // Singleton oder jeweils immer die Queue als Receiver fürs Command Pattern?
         //public List<command> commandQueue { get; set; }
 
-        private static List<command> obj = null;
+        private static List<Command> obj = null;
             
-        protected commandQueue()
+        protected CommandQueue()
         { }
 
-        public static List<command> getQueue { 
+        public static List<Command> getQueue { 
             get
             {
             if (obj == null)
-                return obj = new List<command>();
+                return obj = new List<Command>();
             else
                 return obj;
             }    
