@@ -6,19 +6,24 @@ using System.Threading.Tasks;
 
 namespace SWPProjectClock
 {
-    abstract class ClockObserver
+    public class ClockObserver
     {
         protected ClockSingleton actual = null;
 
-        protected int hour;
-        protected int minute;
-        protected int second;
+        public int hour { get; set; }
+        public int minute { get; set; }
+        public int second { get; set; }
 
         public ClockObserver()
         {
             actual = ClockSingleton.getClock;
         }
 
-        abstract public void getActualTime();
+        public void getActualTime()
+        {
+            hour = actual.hour;
+            minute = actual.minute;
+            second = actual.second;
+        }
     }
 }

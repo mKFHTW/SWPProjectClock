@@ -45,8 +45,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clock.cs" />
+    <Compile Include="ClockControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClockControl.Designer.cs">
+      <DependentUpon>ClockControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClockObserver.cs" />
+    <Compile Include="ClockOne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClockOne.Designer.cs">
+      <DependentUpon>ClockOne.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClockSingleton.cs" />
+    <Compile Include="ClockTwo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClockTwo.Designer.cs">
+      <DependentUpon>ClockTwo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Command.cs" />
     <Compile Include="CommandQueue.cs" />
     <Compile Include="DecCommand.cs" />
@@ -67,6 +85,12 @@
     <Compile Include="SetCommand.cs" />
     <Compile Include="ShowCommand.cs" />
     <Compile Include="UndoCommand.cs" />
+    <EmbeddedResource Include="ClockOne.resx">
+      <DependentUpon>ClockOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClockTwo.resx">
+      <DependentUpon>ClockTwo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

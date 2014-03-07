@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Timers;
 
 namespace SWPProjectClock
 {
-    class ClockSingleton : Clock
+    public class ClockSingleton : Clock
     {
         /*private int hour = 0;
         private int minute = 0;
@@ -20,7 +21,11 @@ namespace SWPProjectClock
         private static ClockSingleton actualClock = null;
 
         protected ClockSingleton()
-        { }
+        {
+            System.Timers.Timer clockTimer = new System.Timers.Timer(1000);
+            clockTimer.Elapsed += new ElapsedEventHandler(Tick);
+            clockTimer.Enabled = true;
+        }
 
         public static ClockSingleton getClock
         {
@@ -35,6 +40,25 @@ namespace SWPProjectClock
 
         }
 
+        private void Tick(object source, ElapsedEventArgs e)
+        {
+            second += 1;
+            if (second == 60)
+            {
+                minute += 1;
+                second = 0;
+            }
+                
+            if(minute == 60)
+            {
+                minute = 0;
+                hour += 1;
+            }
 
+            if (hour == 24)
+                hour = 0;
+
+            updateObserver();
+        }
     }
 }

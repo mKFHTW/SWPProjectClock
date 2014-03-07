@@ -8,11 +8,11 @@ namespace SWPProjectClock
 {
     class ObserverOne : ClockObserver
     {
-        public override void getActualTime()
+        /*public void getActualTime()
         {
             hour = actual.hour;
             minute = actual.minute;
             second = actual.second;
-        }
+        }*/
     }
 }

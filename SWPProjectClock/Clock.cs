@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SWPProjectClock
 {
-    class Clock
+    public class Clock
     {
-        List<ClockObserver> observer;
+        List<ClockObserver> observer = new List<ClockObserver>();
 
         public void loginObserver(ClockObserver obj)
         {

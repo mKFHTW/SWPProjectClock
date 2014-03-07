@@ -47,6 +47,9 @@ namespace SWPProjectClock
                 case "redo":
                     obj = new RedoCommand();
                     break;
+                case "show":
+                    obj = new ShowCommand();
+                    break;
                 default:
                     break;
             }
