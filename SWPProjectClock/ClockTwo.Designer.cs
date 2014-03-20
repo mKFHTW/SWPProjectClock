@@ -61,6 +61,7 @@
             this.Controls.Add(this.clockControl1);
             this.Name = "ClockTwo";
             this.Text = "ClockTwo";
+            this.Load += new System.EventHandler(this.ClockTwo_Load);
             this.ResumeLayout(false);
 
         }

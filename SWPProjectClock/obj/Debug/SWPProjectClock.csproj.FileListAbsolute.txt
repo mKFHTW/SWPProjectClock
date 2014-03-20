@@ -37,3 +37,17 @@ C:\Users\mK\Documents\GitHub\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjec
 C:\Users\mK\Documents\GitHub\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.csproj.GenerateResource.Cache
 C:\Users\mK\Documents\GitHub\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.exe
 C:\Users\mK\Documents\GitHub\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.pdb
+C:\Users\Sevilmis\Documents\GitHub\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.csprojResolveAssemblyReference.cache
+C:\Users\Sevilmis\Documents\GitHub\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.ClockOne.resources
+C:\Users\Sevilmis\Documents\GitHub\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.ClockTwo.resources
+F:\SWPProjectClock\SWPProjectClock\bin\Debug\SWPProjectClock.exe.config
+F:\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.exe
+F:\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.pdb
+F:\SWPProjectClock\SWPProjectClock\bin\Debug\SWPProjectClock.exe
+F:\SWPProjectClock\SWPProjectClock\bin\Debug\SWPProjectClock.pdb
+F:\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.csprojResolveAssemblyReference.cache
+F:\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.ClockOne.resources
+F:\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.ClockTwo.resources
+F:\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.Form1.resources
+F:\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.Properties.Resources.resources
+F:\SWPProjectClock\SWPProjectClock\obj\Debug\SWPProjectClock.csproj.GenerateResource.Cache

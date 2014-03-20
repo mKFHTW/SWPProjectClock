@@ -13,18 +13,25 @@ namespace SWPProjectClock
     partial class ClockOne : Form
     {
         ObserverOne obj = null;
+        int additional;
+        int x = 0;
+        int y = 0; 
 
-        public ClockOne(string timeZone)
+        public ClockOne(int timeZone, int xPos, int yPos)
         {
             InitializeComponent();
 
-             obj = new ObserverOne();
-             timerOne.Enabled = true;
+            obj = new ObserverOne();
+            timerOne.Enabled = true;
+            additional = timeZone;
+            x = xPos;
+            y = yPos;
+            
         }
 
         public void update()
         {
-            lbTime.Text = obj.hour + " : " + obj.minute + " : " + obj.second;
+            lbTime.Text = (obj.hour + additional) + " : " + obj.minute + " : " + obj.second;
         }
 
         private void timerOne_Tick(object sender, EventArgs e)
@@ -35,6 +42,13 @@ namespace SWPProjectClock
         public ClockObserver observerInstance()
         {
             return obj;
+        }
+
+        private void ClockOne_Load(object sender, EventArgs e)
+        {
+            this.Top = x;
+            this.Left = y;
+           
         }
     }
 }

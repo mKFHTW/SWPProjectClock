@@ -12,17 +12,28 @@ namespace SWPProjectClock
         public void doCommand(Command cmd)
         {
             ClockSingleton actual = ClockSingleton.getClock;
-
+            string command = "";
+                        
             foreach (KeyValuePair<string, string> item in cmd.parameter)
             {
                 if (item.Key == "-h")
-                    actual.hour = Convert.ToInt32(item.Value);
+                {
+                    command += " -h " + (Convert.ToInt32(item.Value) - actual.hour).ToString();    
+                    actual.hour = Convert.ToInt32(item.Value);                   
+                }
                 else if (item.Key == "-m")
+                {
+                    command += " -m " + (Convert.ToInt32(item.Value) - actual.minute).ToString();
                     actual.minute = Convert.ToInt32(item.Value);
+                }
                 else
+                {
+                    command += " -s " + (Convert.ToInt32(item.Value) - actual.second).ToString();
                     actual.second = Convert.ToInt32(item.Value);
+                }
             }
-            CommandQueue.getQueue.Add(cmd);
+            Command obj = new Command("inc" + command);
+            CommandQueue.getQueue.Add(obj);
         }
 
         public string getCommandName

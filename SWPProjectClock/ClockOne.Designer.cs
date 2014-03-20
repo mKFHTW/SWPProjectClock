@@ -54,6 +54,7 @@
             this.Controls.Add(this.lbTime);
             this.Name = "ClockOne";
             this.Text = "ClockOne";
+            this.Load += new System.EventHandler(this.ClockOne_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

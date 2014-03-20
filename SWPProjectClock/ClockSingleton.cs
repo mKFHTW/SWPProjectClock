@@ -25,6 +25,10 @@ namespace SWPProjectClock
             System.Timers.Timer clockTimer = new System.Timers.Timer(1000);
             clockTimer.Elapsed += new ElapsedEventHandler(Tick);
             clockTimer.Enabled = true;
+
+            hour = DateTime.Now.Hour;
+            minute = DateTime.Now.Minute;
+            second = DateTime.Now.Second;
         }
 
         public static ClockSingleton getClock

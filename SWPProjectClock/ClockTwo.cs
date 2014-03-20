@@ -13,18 +13,24 @@ namespace SWPProjectClock
     public partial class ClockTwo : Form
     {
         ObserverTwo obj = null;
+        int additional;
+        int x = 0;
+        int y = 0;
 
-        public ClockTwo(string timeZone)
+        public ClockTwo(int timeZone, int xPos, int yPos)
         {
             InitializeComponent();
 
-             obj = new ObserverTwo();
-             timerTwo.Enabled = true;
+            obj = new ObserverTwo();
+            timerTwo.Enabled = true;
+            additional = timeZone;
+            x = xPos;
+            y = yPos; ;
         }
 
         public void update()
-        {            
-            clockControl1.hour = obj.hour;
+        {
+            clockControl1.hour = obj.hour + additional;
             clockControl1.minute = obj.minute;
             clockControl1.second = obj.second;
             clockControl1.Refresh();
@@ -38,6 +44,12 @@ namespace SWPProjectClock
         public ClockObserver observerInstance()
         {
             return obj;
+        }
+
+        private void ClockTwo_Load(object sender, EventArgs e)
+        {
+            this.Top = x;
+            this.Left = y;
         }
     }
 }
