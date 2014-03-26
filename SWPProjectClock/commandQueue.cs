@@ -16,13 +16,13 @@ namespace SWPProjectClock
         protected CommandQueue()
         { }
 
-        public static List<Command> getQueue { 
+        public static List<Command> getQueue {
             get
             {
-            if (obj == null)
-                return obj = new List<Command>();
-            else
-                return obj;
+                if (obj == null)
+                    return obj = new List<Command>();
+                else
+                    return obj;
             }    
         }
     }

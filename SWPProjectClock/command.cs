@@ -7,10 +7,13 @@ using System.Windows.Forms;
 
 namespace SWPProjectClock
 {
-    public class Command
+    public class Command : ICloneable
     {
         public string type { get; set; }
-        public Dictionary<string, string> parameter = new Dictionary<string,string>();         
+        public Dictionary<string, string> parameter = new Dictionary<string,string>();
+        bool undo = false;
+
+        public bool Undo { get { return undo; } set { undo = value; } }
 
         public Command(string commandLine)
         {
@@ -25,6 +28,11 @@ namespace SWPProjectClock
             {
                 MessageBox.Show(item.Key + " " + item.Value);   
             }*/
+        }
+
+        public object Clone()
+        {
+            return this.MemberwiseClone();
         }
     }
 }

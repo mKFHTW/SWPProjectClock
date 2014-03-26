@@ -11,7 +11,7 @@ namespace SWPProjectClock
     {
         public void doCommand(Command cmd)
         {
-            CommandQueue.getQueue.Add(cmd);
+            //CommandQueue.getQueue.Add(cmd);
             ClockSingleton actual = ClockSingleton.getClock;
 
             foreach (var item in cmd.parameter)
@@ -36,7 +36,7 @@ namespace SWPProjectClock
 
         private int timeZone(Command cmd)
         {
-            CommandQueue.getQueue.Add(cmd);
+            //CommandQueue.getQueue.Add(cmd);
             ClockSingleton actual = ClockSingleton.getClock;
             int timeZone = 0;
 
@@ -52,7 +52,7 @@ namespace SWPProjectClock
 
         private int posX(Command cmd)
         {
-            CommandQueue.getQueue.Add(cmd);
+            //CommandQueue.getQueue.Add(cmd);
 
             int x = 0;
 
@@ -68,7 +68,7 @@ namespace SWPProjectClock
 
         private int posY(Command cmd)
         {
-            CommandQueue.getQueue.Add(cmd);
+            //CommandQueue.getQueue.Add(cmd);
 
             int y = 0;
 

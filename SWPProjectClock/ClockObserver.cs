@@ -19,6 +19,11 @@ namespace SWPProjectClock
             actual = ClockSingleton.getClock;
         }
 
+        ~ClockObserver()
+        {
+            actual.logoffObserver(this);
+        }
+
         public void getActualTime()
         {
             hour = actual.hour;

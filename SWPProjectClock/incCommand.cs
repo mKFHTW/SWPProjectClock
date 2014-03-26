@@ -10,7 +10,7 @@ namespace SWPProjectClock
     {
         public void doCommand(Command cmd)
         {
-            ClockSingleton actual = ClockSingleton.getClock;
+            ClockSingleton actual = ClockSingleton.getClock;            
 
             foreach (KeyValuePair<string, string> item in cmd.parameter)
             {

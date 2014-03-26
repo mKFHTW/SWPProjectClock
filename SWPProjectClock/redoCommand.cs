@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SWPProjectClock
 {
@@ -10,35 +11,48 @@ namespace SWPProjectClock
     {
         public void doCommand(Command cmd)
         {
-            Command newCmd = CommandQueue.getQueue[CommandQueue.getQueue.Count - 1];
-            ICommand obj = null;
+            int index = CommandQueue.getQueue.Count, i = 1;
 
-            switch (newCmd.type)
+            do
             {
-                case "set":
-                    obj = new SetCommand();
-                    break;
-                case "help":
-                    obj = new HelpCommand();
-                    break;
-                case "dec":
-                    obj = new DecCommand();
-                    break;
-                case "inc":
-                    obj = new IncCommand();
-                    break;
-                case "undo":
-                    obj = new UndoCommand();
-                    break;
-                case "redo":
-                    obj = new RedoCommand();
-                    break;
-                default:
-                    break;
-            }
+                Command newCmd = CommandQueue.getQueue[index - i];
+                ICommand obj = null;
 
-            obj.doCommand(newCmd);
+                switch (newCmd.type)
+                {
+                    case "set":
+                        obj = new SetCommand();
+                        break;
+                    case "help":
+                        obj = new HelpCommand();
+                        break;
+                    case "dec":
+                        if (newCmd.Undo == false)
+                            obj = new DecCommand();
+                        else
+                            obj = new IncCommand();
+                        break;
+                    case "inc":
+                        if (newCmd.Undo == false)
+                            obj = new IncCommand();
+                        else
+                            obj = new DecCommand();
+                        break;
+                    case "undo":
+                        obj = new UndoCommand();
+                        break;
+                    case "redo":
+                        obj = new RedoCommand();
+                        break;
+                    default:
+                        break;
+                }
+
+                obj.doCommand(newCmd);
+                i++;
+            } while ((index - i) > 1 && CommandQueue.getQueue[index - i].Undo != false);
         }
+        
 
         public string getCommandName
         {
