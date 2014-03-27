@@ -8,25 +8,37 @@ namespace SWPProjectClock
 {
     class IncCommand : ICommand
     {
+        ClockSingleton actual;
+
+        public IncCommand() { actual = ClockSingleton.getClock; }
+
         public void doCommand(Command cmd)
         {
-            ClockSingleton actual = ClockSingleton.getClock;            
-
-            foreach (KeyValuePair<string, string> item in cmd.parameter)
-            {
-                if (item.Key == "-h")
-                    actual.hour += Convert.ToInt32(item.Value) % 24;
-                else if (item.Key == "-m")
-                    actual.minute += Convert.ToInt32(item.Value) % 60;
-                else
-                    actual.second += Convert.ToInt32(item.Value) % 60;
-            }
+            actual.inc(cmd);
             CommandQueue.getQueue.Add(cmd);
         }
-
-        public string getCommandName
+        
+        public void undoCommand(Command cmd)
         {
-            get { return "inc"; }
+            actual.dec(cmd);
+            /*int i = 1;
+
+            while (CommandQueue.getQueue[CommandQueue.getQueue.Count - i].Undo == true)
+            {
+                i++;
+            }
+
+            switch (CommandQueue.getQueue[CommandQueue.getQueue.Count - i].type)
+            {
+                case "inc":
+                    actual.dec(CommandQueue.getQueue[CommandQueue.getQueue.Count - i]);
+                    break;
+                case "dec":
+                    actual.inc(CommandQueue.getQueue[CommandQueue.getQueue.Count - i]);
+                    break;
+                default:
+                    break;
+            }*/
         }
     }
 }

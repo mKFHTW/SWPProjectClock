@@ -9,54 +9,49 @@ namespace SWPProjectClock
 {
     class RedoCommand : ICommand
     {
+        ClockSingleton actual;
+
+        public RedoCommand() { actual = ClockSingleton.getClock; }
+
         public void doCommand(Command cmd)
         {
             int index = CommandQueue.getQueue.Count, i = 1;
+            Command newCmd = CommandQueue.getQueue[index - i];
 
-            do
+            switch (newCmd.type)
             {
-                Command newCmd = CommandQueue.getQueue[index - i];
-                ICommand obj = null;
+                case "dec":
+                    if (newCmd.Undo == false)
+                        actual.dec(newCmd);
+                    else
+                        actual.inc(newCmd);
+                    break;
+                case "inc":
+                    if (newCmd.Undo == false)
+                        actual.inc(newCmd);
+                    else
+                        actual.dec(newCmd);
+                    break;
+                default:
+                    break;
+            }            
 
-                switch (newCmd.type)
-                {
-                    case "set":
-                        obj = new SetCommand();
-                        break;
-                    case "help":
-                        obj = new HelpCommand();
-                        break;
-                    case "dec":
-                        if (newCmd.Undo == false)
-                            obj = new DecCommand();
-                        else
-                            obj = new IncCommand();
-                        break;
-                    case "inc":
-                        if (newCmd.Undo == false)
-                            obj = new IncCommand();
-                        else
-                            obj = new DecCommand();
-                        break;
-                    case "undo":
-                        obj = new UndoCommand();
-                        break;
-                    case "redo":
-                        obj = new RedoCommand();
-                        break;
-                    default:
-                        break;
-                }
+            Command obj = (Command)CommandQueue.getQueue[CommandQueue.getQueue.Count - 1].Clone();
 
-                obj.doCommand(newCmd);
-                i++;
-            } while ((index - i) > 1 && CommandQueue.getQueue[index - i].Undo != false);
+            if (obj.Undo == true)
+            {
+                if (obj.type == "inc")
+                    obj.type = "dec";
+                else
+                    obj.type = "inc";
+            }
+
+            CommandQueue.getQueue.Add(obj);
         }
-        
 
-        public string getCommandName
+        public void undoCommand(Command cmd)
         {
-            get { return "redo"; }
+            throw new NotImplementedException();
         }
     }
 }

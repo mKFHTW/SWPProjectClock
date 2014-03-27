@@ -13,19 +13,21 @@ namespace SWPProjectClock
 {
     public partial class Form1 : Form
     {
+        Invoker inv;
+
         public Form1()
         {
             InitializeComponent();
-        }
+            inv = new Invoker();
+        }               
 
         private void btnDoCommand_Click(object sender, EventArgs e)
         {
+            inv.invoke(tBoxCommandLine.Text);
             //ArrayList _loadedPlugins;
 
-            Command newCommand = new Command(tBoxCommandLine.Text);
-            ICommand obj = null;
-
-             
+            //Command newCommand = new Command(tBoxCommandLine.Text);
+            /*ICommand obj = null;             
 
             switch (newCommand.type)
             {
@@ -54,7 +56,7 @@ namespace SWPProjectClock
                     break;
             }
 
-            obj.doCommand(newCommand);
+            obj.doCommand(newCommand);*/
 
             /*pluginManager PluginManager = new pluginManager();
             _loadedPlugins = PluginManager.LoadPlugins("/../../.", "*.cs", typeof(ICommand));
@@ -66,9 +68,5 @@ namespace SWPProjectClock
                 
             }*/
         }
-
-     
-
-       
     }
 }

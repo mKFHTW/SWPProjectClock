@@ -82,10 +82,9 @@ namespace SWPProjectClock
             return y;
         }
 
-
-        public string getCommandName
+        public void undoCommand(Command cmd)
         {
-            get { return "show"; }
+            throw new NotImplementedException();
         }
     }
 }

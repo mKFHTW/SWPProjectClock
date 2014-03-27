@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace SWPProjectClock
 {
     interface ICommand
-    {
-        string getCommandName { get; }
-        void doCommand(Command cmd);        
+    {        
+        void doCommand(Command cmd);
+        void undoCommand(Command cmd);
     }
 }

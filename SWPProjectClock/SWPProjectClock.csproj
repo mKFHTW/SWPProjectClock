@@ -77,6 +77,7 @@
     <Compile Include="HelpCommand.cs" />
     <Compile Include="ICommand.cs" />
     <Compile Include="IncCommand.cs" />
+    <Compile Include="Invoker.cs" />
     <Compile Include="observerOne.cs" />
     <Compile Include="observerTwo.cs" />
     <Compile Include="Program.cs" />
@@ -84,7 +85,6 @@
     <Compile Include="RedoCommand.cs" />
     <Compile Include="SetCommand.cs" />
     <Compile Include="ShowCommand.cs" />
-    <Compile Include="UndoCommand.cs" />
     <EmbeddedResource Include="ClockOne.resx">
       <DependentUpon>ClockOne.cs</DependentUpon>
     </EmbeddedResource>

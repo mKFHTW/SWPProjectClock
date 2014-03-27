@@ -8,25 +8,19 @@ namespace SWPProjectClock
 {
     class DecCommand : ICommand
     {
-        public void doCommand(Command cmd)
-        {
-            ClockSingleton actual = ClockSingleton.getClock;
+        ClockSingleton actual;
 
-            foreach (KeyValuePair<string, string> item in cmd.parameter)
-            {
-                if (item.Key == "-h")
-                    actual.hour -= Convert.ToInt32(item.Value);
-                else if (item.Key == "-m")
-                    actual.minute -= Convert.ToInt32(item.Value);
-                else
-                    actual.second -= Convert.ToInt32(item.Value);
-            }
+        public DecCommand() { actual = ClockSingleton.getClock; }
+
+        public void doCommand(Command cmd)
+        {         
+            actual.dec(cmd);
             CommandQueue.getQueue.Add(cmd);
         }
 
-        public string getCommandName
+        public void undoCommand(Command cmd)
         {
-            get { return "dec"; }
+            actual.inc(cmd);
         }
     }
 }

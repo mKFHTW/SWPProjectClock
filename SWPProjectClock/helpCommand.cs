@@ -21,9 +21,9 @@ show –t <type> {-z <timezone>} {-x <x> -y <y>}	Öffnet ein Grafikfenster an x,
             CommandQueue.getQueue.Add(cmd);
         }
 
-        public string getCommandName
+        public void undoCommand(Command cmd)
         {
-            get { return "help"; }
+            throw new NotImplementedException();
         }
     }
 }

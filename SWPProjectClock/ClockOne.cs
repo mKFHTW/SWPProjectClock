@@ -25,14 +25,8 @@ namespace SWPProjectClock
             timerOne.Enabled = true;
             additional = timeZone;
             x = xPos;
-            y = yPos;
-            
-        }
-
-        public void update()
-        {
-            lbTime.Text = (obj.hour + additional) + " : " + obj.minute + " : " + obj.second;
-        }
+            y = yPos;            
+        }        
 
         private void timerOne_Tick(object sender, EventArgs e)
         {
@@ -47,8 +41,12 @@ namespace SWPProjectClock
         private void ClockOne_Load(object sender, EventArgs e)
         {
             this.Top = x;
-            this.Left = y;
-           
+            this.Left = y;           
+        }
+
+        public void update()
+        {
+            lbTime.Text = (obj.hour + additional) + " : " + obj.minute + " : " + obj.second;
         }
     }
 }
