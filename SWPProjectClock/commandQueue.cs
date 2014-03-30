@@ -16,7 +16,8 @@ namespace SWPProjectClock
         protected CommandQueue()
         { }
 
-        public static List<Command> getQueue {
+        public static List<Command> Instance 
+        {
             get
             {
                 if (obj == null)

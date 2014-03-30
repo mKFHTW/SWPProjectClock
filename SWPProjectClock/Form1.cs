@@ -13,12 +13,11 @@ namespace SWPProjectClock
 {
     public partial class Form1 : Form
     {
-        Invoker inv;
+        Invoker inv = new Invoker();
 
         public Form1()
         {
-            InitializeComponent();
-            inv = new Invoker();
+            InitializeComponent();            
         }               
 
         private void btnDoCommand_Click(object sender, EventArgs e)

@@ -15,7 +15,7 @@ namespace SWPProjectClock
         public void doCommand(Command cmd)
         {
             actual.inc(cmd);
-            CommandQueue.getQueue.Add(cmd);
+            CommandQueue.Instance.Add(cmd);
         }
         
         public void undoCommand(Command cmd)

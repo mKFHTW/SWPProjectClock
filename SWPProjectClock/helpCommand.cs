@@ -18,7 +18,7 @@ undo	macht die letzten Befehle rückgängig (achten Sie auf eine sinnvolle Ausga
 redo	wiederholt den letzten Befehl oder macht das letzte undo wieder rückgängig 
 show –t <type> {-z <timezone>} {-x <x> -y <y>}	Öffnet ein Grafikfenster an x, y und zeigt eine Uhr vom Typ <type> an für eine bestimmte Zeitzone (Städte) 
 ");
-            CommandQueue.getQueue.Add(cmd);
+            CommandQueue.Instance.Add(cmd);
         }
 
         public void undoCommand(Command cmd)

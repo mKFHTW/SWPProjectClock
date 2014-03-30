@@ -78,6 +78,8 @@
     <Compile Include="ICommand.cs" />
     <Compile Include="IncCommand.cs" />
     <Compile Include="Invoker.cs" />
+    <Compile Include="MacroComamnd.cs" />
+    <Compile Include="Macros.cs" />
     <Compile Include="observerOne.cs" />
     <Compile Include="observerTwo.cs" />
     <Compile Include="Program.cs" />

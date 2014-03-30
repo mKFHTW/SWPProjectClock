@@ -15,8 +15,8 @@ namespace SWPProjectClock
 
         public void doCommand(Command cmd)
         {
-            int index = CommandQueue.getQueue.Count, i = 1;
-            Command newCmd = CommandQueue.getQueue[index - i];
+            int index = CommandQueue.Instance.Count, i = 1;
+            Command newCmd = CommandQueue.Instance[index - i];
 
             switch (newCmd.type)
             {
@@ -36,7 +36,7 @@ namespace SWPProjectClock
                     break;
             }            
 
-            Command obj = (Command)CommandQueue.getQueue[CommandQueue.getQueue.Count - 1].Clone();
+            Command obj = (Command)CommandQueue.Instance[CommandQueue.Instance.Count - 1].Clone();
 
             if (obj.Undo == true)
             {
@@ -46,7 +46,7 @@ namespace SWPProjectClock
                     obj.type = "inc";
             }
 
-            CommandQueue.getQueue.Add(obj);
+            CommandQueue.Instance.Add(obj);
         }
 
         public void undoCommand(Command cmd)
