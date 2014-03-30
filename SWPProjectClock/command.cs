@@ -21,9 +21,11 @@ namespace SWPProjectClock
 
             type = splitted[0];
 
-            for (int i = 1; i < splitted.Length; i+=2)            
-                parameter.Add(splitted[i], splitted[i + 1]);
-
+            for (int i = 1; i < splitted.Length; i+=2)
+            {
+                try { parameter.Add(splitted[i], splitted[i + 1]); }
+                catch { }
+            }
             /*foreach (var item in parameter)
             {
                 MessageBox.Show(item.Key + " " + item.Value);   
